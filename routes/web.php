@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::get('/testing', function () {
     echo 'This is Testing';
 });
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 

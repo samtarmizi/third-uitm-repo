@@ -5,7 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Blog Dashboard</div>
+                <div class="card-header">Blog Dashboard
+                    <div class="float-right">
+                        <a href="{{ route('blog:create')}}" class="btn btn-primary">New</a>
+                        </div>
+                </div>
+               
 
                 <div class="card-body">
                         @if (session()->has('alert'))
@@ -22,7 +27,7 @@
                                     <th>Title</th>
                                     <th>Created</th>
                                     <th>Submitted by</th>
-                                    <th></th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -31,6 +36,7 @@
                                         <td>{{ $blog->id}}</td>
                                         <td>{{ $blog->title}}</td>
                                         <td>{{ $blog->created_at->diffForHumans()}}</td>
+                                        <td>{{ $blog->user_id ? $blog->user->name : "Not belong to user"}}</td>
                                         <td>
                                             <a href="{{ route('blog:show',$blog) }}" class="btn btn-success">Show</a>
                                         <a href="{{ route('blog:edit',$blog) }}" class="btn btn-primary">Edit</a>
