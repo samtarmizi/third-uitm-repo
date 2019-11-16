@@ -34,7 +34,7 @@
                                         <td>
                                             <a href="{{ route('blog:show',$blog) }}" class="btn btn-success">Show</a>
                                         <a href="{{ route('blog:edit',$blog) }}" class="btn btn-primary">Edit</a>
-                                            <a href="" class="btn btn-danger"
+                                        <a href="{{ route('blog:delete', $blog)}}" class="btn btn-danger"
                                                 onclick="return confirm('Are you sure?')">Delete</a>
                                         </td>
                                     </tr>
