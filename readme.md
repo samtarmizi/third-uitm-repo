@@ -77,4 +77,7 @@ The Laravel framework is open-source software licensed under the [MIT license](h
     php artisan migrate --step
 
     php artisan migrate:status
-    
+
+## Ternary Operator
+
+    $blog->user_id ? $blog->user->name : "Not belong to user"    
