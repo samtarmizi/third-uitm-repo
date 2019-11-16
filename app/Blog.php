@@ -12,4 +12,9 @@ class Blog extends Model
         return $this->belongsTo('App\User');
         //return $this->belongsTo(User::class);
     }
+
+    //define $blog->author
+    public function getAuthorAttribute(){
+        return !is_null($this->user) ? $this->user->name : 'No Author';
+    }
 }

@@ -17,6 +17,11 @@
                             {{ $blog->body }}
                         </div>
                         <div class="form-group">
+                            Written by: 
+                            {{ $blog->author}}
+                        </div>
+                       
+                        <div class="form-group">
                             <a href="{{ route('blog:index')}}" class="btn btn-link">Back</a>
                         </div>
                     </form>
