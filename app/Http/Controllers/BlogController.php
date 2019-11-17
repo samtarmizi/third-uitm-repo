@@ -16,7 +16,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::paginate(1);
+        $blogs = Blog::paginate(5);
         //dd($blogs);
         // dalam folder index.blade.php    
         return view('blogs.index')->with(compact('blogs'));
@@ -42,10 +42,10 @@ class BlogController extends Controller
     {
         //dd($request);
         //Method 1
-        $blog =  new Blog();
-        $blog->title = $request->get('title');
-        $blog->body = $request->get('body');
-        $blog->save();
+        // $blog =  new Blog();
+        // $blog->title = $request->get('title');
+        // $blog->body = $request->get('body');
+        // $blog->save();
 
         //Method 2 - Mass assignable
        //$blog = Blog::create($request->only('title', 'body'));
