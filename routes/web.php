@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::get('/testing', function () {
     echo 'This is Testing';
 });
-Auth::routes(['verify' => true]);
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/blogs/show/{blog}', 'BlogController@show')->name('blog:show');
